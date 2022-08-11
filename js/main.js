@@ -8,15 +8,16 @@ var borPul = prompt("Sayohat uchun pullingizni yozing so`mda");
 
 console.log(borPul);
 
-var dolarToSum = `${boribKelishDolar} + ${mexmonxonaDolar} * ${onedolar}`;
-var evroToSum = `${muzeyEvro} * ${oneEvro}`;
+var dolarToSum = boribKelishDolar + mexmonxonaDolar * onedolar;
+var evroToSum = muzeyEvro * oneEvro;
 
-var xarajatlar = `${evroToSum} + ${dolarToSum}`;
+var xarajatlar = evroToSum + dolarToSum;
 
-var qaloldinganPul = `${borPul} - ${xarajatlar}`;
+var qaloldinganPul = borPul - xarajatlar;
 
-if (borPul <= xarajatlar) {
+if (borPul >= xarajatlar) {
   elText.textContent = "Oq yo’l, Jonibek!";
-} else (borPul > xarajatlar) {
-    elText.textContent = "  Jonibek, Shahzoddan so’ra, balki berar! U ham bermasa bollardan so’ra! Ularam bermasa uyda telefonda kino ko’r."
+} else {
+  elText.textContent =
+    "Jonibek, Shahzoddan so’ra, balki berar! U ham bermasa bollardan so’ra! Ularam bermasa uyda telefonda kino ko’r.";
 }
